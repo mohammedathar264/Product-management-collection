@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <body>
+  	<div th:insert="menu.html"></div>
+  	<table class="talist" border="1">
+		<tr>
+			<th>Product id</th><th>Product name</th><th>Product brand</th><th>Product price</th>
+		</tr>
+		<tr th:each="product:${plist}">
+			<td th:text="${product.pid}"></td>
+			<td th:text="${product.name}"></td>
+			<td th:text="${product.brand}"></td>
+			<td th:text="${product.price}"></td>
+		</tr>	  
+	</table> 
+ </body>
+ </html> 
